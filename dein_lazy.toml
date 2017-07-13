@@ -1,0 +1,66 @@
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+on_cmd = 'Denite'
+if = 'has("nvim")'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+on_cmd = "Quickrun"
+hook_post_update = '''
+  let g:quickrun_config = {'*': {'hook/time/enable': '1'},}
+'''
+
+#nerdtree
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+on_cmd = 'NERDTree' hook_add = ''' nnoremap <C-n> <:NERDTree<Enter>
+let NERDTreeShowHidden=1
+'''
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+hook_post_update = '''
+  if dein#util#_is_windows()
+    let cmd = 'tools\\update-dll-mingw'
+  elseif dein#util#_is_cygwin()
+    let cmd = 'make -f make_cygwin.mak'
+  elseif executable('gmake')
+    let cmd = 'gmake'
+  else
+    let cmd = 'make'
+  endif
+  let g:dein#plugin.build = cmd
+'''
+
+[[plugins]]
+repo = 'scrooloose/syntastic'
+hook_source = 'source ~/.vim/rc/plugins/syntastic.rc.vim'
+
+[[plugins]]
+repo = 'rking/ag.vim'
+hook_source = '''
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
+'''
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_source = '''
+  let g:deoplete#enable_at_startup = 1
+  autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+'''
+on_i = 1
+
+[[plugins]]
+repo = 'zchee/deoplete-go'
+on_i = 1
+on_ft = 'go'
+
+[[plugins]]
+repo = 'fatih/vim-go'
+hook_source = 'source ~/.vim/rc/plugins/vimgo.rc.vim'
+on_ft = ['go']
+
