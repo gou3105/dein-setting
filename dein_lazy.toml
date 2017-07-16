@@ -13,7 +13,8 @@ hook_post_update = '''
 #nerdtree
 [[plugins]]
 repo = 'scrooloose/nerdtree'
-on_cmd = 'NERDTree' hook_add = ''' nnoremap <C-n> <:NERDTree<Enter>
+on_cmd = 'NERDTree'
+hook_add = ''' nnoremap <C-n> <:NERDTree<Enter>
 let NERDTreeShowHidden=1
 '''
 
@@ -69,5 +70,4 @@ on_ft = 'go'
 [[plugins]]
 repo = 'fatih/vim-go'
 hook_source = 'source ~/.vim/rc/plugins/vimgo.rc.vim'
-on_ft = ['go']
-
+on_ft = 'go'
