@@ -36,7 +36,10 @@ hook_add = '''
 
 [[plugins]]
 repo = 'junegunn/vim-easy-align'
-hook_source = 'nmap ga <Plug>(EasyAlign)'
+hook_source = '''
+  nmap ga <Plug>(EasyAlign)
+  xmap ga <Plug>(EasyAlign)
+'''
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
