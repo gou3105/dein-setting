@@ -41,3 +41,5 @@ hook_source = 'nmap ga <Plug>(EasyAlign)'
 [[plugins]]
 repo = 'mattn/emmet-vim'
 
+[[plugins]]
+repo = 'Yggdroot/indentLine'
