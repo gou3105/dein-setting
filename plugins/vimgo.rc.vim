@@ -1,9 +1,12 @@
-let g:go_hightlight_functions = 1
-let g:go_hightlight_methods = 1
-let g:go_hightlight_structs = 1
-let g:go_hightlight_interfaces = 1
-let g:go_hightlight_operators = 1
-let g:go_hightlight_build_constraints = 1
+" hightlight設定
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
 let g:go_bin_path = expand("~/go/bin")
 
 " importされていないpackageも補完されるように
