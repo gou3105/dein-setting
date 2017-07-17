@@ -65,3 +65,8 @@ repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'yasuharu519/vim-codic'
+hook_source = 'let g:vim_codic_access_token = "AqM4OlZZJ0lJj0mcIxbs2uOpKmpMaI8pBY"'
+
