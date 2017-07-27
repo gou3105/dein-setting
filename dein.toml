@@ -48,14 +48,6 @@ repo = 'mattn/emmet-vim'
 [[plugins]]
 repo = 'Yggdroot/indentLine'
 
-# j,kを高速化
-[[plugins]]
-repo = 'rhysd/accelerated-jk'
-hook_source = '''
-  nmap j <Plug>(accelerated_jk_gj)
-  nmap k <Plug>(accelerated_jk_gk)
-'''
-
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 hook_source = 'let g:airline#extensions#branch#enabled = 1'
